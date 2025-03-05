@@ -1,0 +1,70 @@
+@import url(./app/utilities.css); /* You can add global styles to this file, and also import other style files */
+
+
+/* add basic boiler plate code*/
+/* src/styles.css */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  font-family: 'montserrat';
+
+}
+
+html, body {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+    background: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+  --form-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  --form-container-bg: #ffffff;
+  --text-color: #333333;
+  --input-bg: #f8f8f8;
+  --form-input-border: #e0e0e0;
+  --input-text: #333333;
+  --form-input-focus-border: #2575fc;
+  --error-color: #dc3545;
+  --accent-color: #2575fc;
+  --form-button-gradient: linear-gradient(135deg, #6a11cb, #2575fc);
+  --form-button-hover: linear-gradient(135deg, #5a0cb9, #1565ec);
+  --border-color: #dddddd;
+  --transition-speed: 0.3s;
+}
+
+
+body.light-theme {
+  --bg-color: #ffffff;
+  --bg-color-translucent: rgba(255, 255, 255, 0.5);
+  --text-color: #333333;
+  --text-muted: #666666;
+  --accent-color: #0077cc;
+  --accent-color-rgb: 0, 119, 204;
+  --hover-bg: #f0f0f0;
+  --border-color: #e0e0e0;
+  --card-bg: #ffffff;
+  --card-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  --btn-bg: #f0f0f0;
+  --btn-hover: #e0e0e0;
+}
+
+body.dark-theme {
+  --bg-color: #121212;
+  --bg-color-translucent: rgba(18, 18, 18, 0.5);
+  --text-color: #e0e0e0;
+  --text-muted: #a0a0a0;
+  --accent-color: #3ea8ff;
+  --accent-color-rgb: 62, 168, 255;
+  --hover-bg: #2a2a2a;
+  --border-color: #3a3a3a;
+  --card-bg: #1e1e1e;
+  --card-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  --btn-bg: #2a2a2a;
+  --btn-hover: #3a3a3a;
+}
+
+

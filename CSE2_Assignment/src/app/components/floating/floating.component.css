@@ -1,0 +1,5 @@
+/* src/app/components/floating/floating.component.css */
+:host {
+  display: block;
+  position: relative;
+}

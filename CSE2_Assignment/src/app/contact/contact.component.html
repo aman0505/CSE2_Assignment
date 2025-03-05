@@ -1,0 +1,45 @@
+<div class="contact-container" appGlowingEffect [disabled]="false" [glow]="true" [spread]="40" [proximity]="64" [inactiveZone]="0.01" [borderWidth]="3">
+  <h2>Contact Us</h2>
+  <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input
+        type="text"
+        id="name"
+        formControlName="name"
+        [ngClass]="{'invalid': isSubmitted && formControls['name'].errors}"
+      >
+      <div class="error-message" *ngIf="isSubmitted && formControls['name'].errors">
+        <span *ngIf="formControls['name'].errors?.['required']">Name is required</span>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input
+        type="email"
+        id="email"
+        formControlName="email"
+        [ngClass]="{'invalid': isSubmitted && formControls['email'].errors}"
+      >
+      <div class="error-message" *ngIf="isSubmitted && formControls['email'].errors">
+        <span *ngIf="formControls['email'].errors?.['required']">Email is required</span>
+        <span *ngIf="formControls['email'].errors?.['email']">Please enter a valid email</span>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="message">Message</label>
+      <textarea
+        id="message"
+        formControlName="message"
+        [ngClass]="{'invalid': isSubmitted && formControls['message'].errors}"
+      ></textarea>
+      <div class="error-message" *ngIf="isSubmitted && formControls['message'].errors">
+        <span *ngIf="formControls['message'].errors?.['required']">Message is required</span>
+      </div>
+    </div>
+
+    <button type="submit" class="submit-button">Submit</button>
+  </form>
+</div>

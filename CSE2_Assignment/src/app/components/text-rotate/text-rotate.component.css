@@ -1,0 +1,4 @@
+/* src/app/components/text-rotate/text-rotate.component.css */
+:host {
+  display: inline-block;
+}
