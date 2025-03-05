@@ -1,0 +1,24 @@
+<nav class="navbar">
+  <div class="navbar-brand">
+    <a routerLink="/">Aman gupta </a>
+    <button class="menu-toggle" (click)="toggleMenu()">
+      <span class="menu-icon" [class.open]="isMenuOpen">
+        <span></span>
+        <span></span>
+        <span></span>
+      </span>
+    </button>
+  </div>
+
+  <div class="navbar-menu" [class.is-active]="isMenuOpen">
+    <div class="navbar-start">
+      <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="navbar-item">Home</a>
+      <a routerLink="/about" routerLinkActive="active" class="navbar-item">About</a>
+      <a routerLink="/services" routerLinkActive="active" class="navbar-item">Services</a>
+      <a routerLink="/contact" routerLinkActive="active" class="navbar-item">Contact</a>
+    </div>
+    <div class="navbar-end">
+      <a routerLink="/login" class="navbar-item">Login</a>
+    </div>
+  </div>
+</nav>
