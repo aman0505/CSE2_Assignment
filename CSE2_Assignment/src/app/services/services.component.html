@@ -1,0 +1,18 @@
+<div class="services-container">
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Our Services</h1>
+      <p class="tagline">Discover the wide range of services we offer</p>
+    </div>
+  </section>
+
+  <section class="services-list">
+    <div class="service-item" *ngFor="let service of services">
+      <div class="service-icon">
+        <span class="material-icons">{{ service.icon }}</span>
+      </div>
+      <h3>{{ service.title }}</h3>
+      <p>{{ service.description }}</p>
+    </div>
+  </section>
+</div>

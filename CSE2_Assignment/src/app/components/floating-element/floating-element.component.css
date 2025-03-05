@@ -1,0 +1,4 @@
+/* src/app/components/floating-element/floating-element.component.css */
+:host {
+  display: contents;
+}

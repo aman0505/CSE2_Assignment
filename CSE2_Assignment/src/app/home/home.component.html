@@ -1,0 +1,50 @@
+<div class="home-container">
+  <section class="hero">
+    <div class="hero-content">
+      <h1 class="hero-title">{{ title }}</h1>
+      <p class="subtitle">{{ subtitle }}</p>
+      <button class="cta-button">Get Started</button>
+    </div>
+  </section>
+
+  <section class="features">
+    <h2 class="section-title">Our Features</h2>
+    <div class="feature-grid">
+      <div class="feature" *ngFor="let feature of features">
+        <div class="feature-icon" *ngIf="feature.icon">
+          <span class="material-icons">{{ feature.icon }}</span>
+        </div>
+        <h3>{{ feature.title }}</h3>
+        <p>{{ feature.description }}</p>
+        <a href="#" class="feature-link">Learn More →</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="about-section" *ngIf="showMore">
+    <div class="about-content">
+      <h2 class="section-title">About Us</h2>
+      <p>We are a dedicated team focused on delivering high-quality solutions to our customers.</p>
+      <div class="team-grid">
+        <div class="team-member">
+          <img src="assets/images/team1.jpg" alt="Team Member">
+          <h4>John Doe</h4>
+          <p>CEO</p>
+        </div>
+        <div class="team-member">
+          <img src="assets/images/team2.jpg" alt="Team Member">
+          <h4>Jane Smith</h4>
+          <p>CTO</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="show-more">
+    <button class="toggle-button" (click)="toggleShowMore()">
+      {{ showMore ? "Show Less" : "Show More" }}
+    </button>
+  </div>
+</div>
+
+

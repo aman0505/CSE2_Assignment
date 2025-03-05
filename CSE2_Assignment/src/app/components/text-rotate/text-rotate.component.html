@@ -1,0 +1,26 @@
+<!-- src/app/components/text-rotate/text-rotate.component.html -->
+<span class="{{ getClassName('flex flex-wrap whitespace-pre-wrap', mainClassName) }}">
+  <span class="sr-only">{{ texts[currentTextIndex] }}</span>
+
+  <div class="{{ getClassName('flex flex-wrap', splitBy === 'lines' ? 'flex-col w-full' : '') }}" aria-hidden="true">
+    <ng-container *ngFor="let wordObj of elements; let wordIndex = index">
+      <span class="{{ getClassName('inline-flex', splitLevelClassName) }}">
+        <ng-container *ngFor="let char of wordObj.characters; let charIndex = index">
+          <span
+            class="{{ getClassName('inline-block', elementLevelClassName) }}"
+            [@textAnimation]="{
+              value: '',
+              params: {
+                duration: 300,
+                delay: getStaggerDelay(getPreviousCharsCount(wordIndex) + charIndex, getTotalCharCount())
+              }
+            }"
+          >
+            {{ char }}
+          </span>
+        </ng-container>
+        <span *ngIf="wordObj.needsSpace" class="whitespace-pre"> </span>
+      </span>
+    </ng-container>
+  </div>
+</span>
